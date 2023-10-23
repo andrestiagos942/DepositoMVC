@@ -1,0 +1,34 @@
+﻿@using Proyecto_11_11.Models.Entities;
+@model List<Deposito>;
+
+
+
+@* HTML *@
+
+
+<h1 style="text-align:center">DEPOSITOS</h1>
+<div class="row">
+    <a class="row col" asp-action="CreateDeposito" asp-controller="Deposito" style="margin-bottom:10px;">AGREGAR DEPOSITO NUEVO</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>PRODUCTO</th>
+            <th>STOCK</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var deposito in Model)
+        {
+            <tr>
+                <td>@deposito.Id</td>
+                <td>@deposito.Producto</td>
+                <td>@deposito.Stock</td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
