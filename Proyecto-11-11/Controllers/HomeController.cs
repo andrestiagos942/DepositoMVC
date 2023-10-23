@@ -7,7 +7,7 @@ namespace Proyecto_11_11.Controllers
         public IActionResult Index()
         {
            
-            return RedirectToAction("Index", "Producto");
+            return RedirectToAction("Index", "Deposito");
         }
     }
 }
